@@ -1,0 +1,118 @@
+header{
+    background: url(/images/Rectangle\ 2.png);
+    background-size: 50%, 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    nav{
+        padding: 20px 0px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            li{
+                color: black;
+                text-decoration: none;
+                a{
+                    all: inherit;
+                }
+            }
+        }
+        span{
+            .dropdown{
+                position: relative;
+                display: inline-block;
+                label{
+                    padding-left: 10px;
+                }
+                input:checked + .drop{
+                    display: block;
+                }
+                .drop{
+                    display: none;
+                    position: absolute;
+                    width: 100px;
+                    padding: 15px;
+                    background-color: black;
+                    border-radius: 4px;
+                    ul{
+                        display: block;
+                        li{
+                            margin-block: 5px;
+                            display: block;
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .dropdown-bar{
+            display: none;
+        }
+        }
+    }
+}
+
+
+@media (max-width:450px) {
+    header{
+        background: none;
+        nav{
+            .container{
+                ul{
+                    li{
+                        display: none;
+                    }
+                    li:nth-child(1){
+                        display: inline-block;
+                    }
+                }
+                span{
+                    display: none;
+                }
+                .dropdown-bar{
+                    display: inline-block;
+                    position: relative;
+                    .drop-bars{
+                        position: absolute;
+                        right: 0;
+                        top: 23px;
+                        background-color: black;
+                        border-radius: 3px;
+                        width: 100px;
+                        display: none;
+                        ul{
+                            all: unset;
+                            li{
+                                display: block;
+                                color: white;
+                                text-align: center;
+                                margin: 10px;
+                                &:hover{
+                                    background-color: rgb(31, 31, 31);
+                                }
+                                a{
+                                    all: inherit;
+                                }
+                            }
+                        }
+                    }
+                    label{
+                        font-size: x-large;
+                    }
+                    input:checked + .drop-bars{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .images{
+        all:  unset;
+    }
+}
